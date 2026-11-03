@@ -66,6 +66,7 @@
         record: "{{ domain_name }}" #janakiraodevops.online 
         type: A
         ttl: 1
+        loop: "{{ instances }}"
       when: action_create_or_terminate == "delete" and item == "frontend"
      
     - name: Delete Ec2 instances 
