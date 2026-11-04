@@ -13,6 +13,17 @@
     name: common 
     tasks_from: systemd-setup
 
+- name: daemon reload
+  include_role: 
+    name: common 
+    tasks_from: reload
+
+
+- name: Enable and restart 
+  include_role: 
+    name: common 
+    tasks_from: restart 
+
 
 - name: Copy mongo repo 
   ansible.builtin.copy:
