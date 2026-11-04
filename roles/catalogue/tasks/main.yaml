@@ -1,7 +1,7 @@
 - name: application setup 
   include_role: 
     name: comman 
-    task_from:  app_setup
+    task_from: app_setup
 
 
 # - name: disable the nodejs
