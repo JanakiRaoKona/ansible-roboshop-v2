@@ -4,22 +4,22 @@ ansible_password: DevOps321
 # user: roboshop 
 # password: roboshop123
 
-ansible_user: "{{ vault_ansible_user }}"
-ansible_password: "{{ vault_ansible_password }}" 
-mysql_root_password: "{{ vault_mysql_root_password }}"
-rabbitmq_user: "{{ vault_rabbitmq_user }}"
-rabbitmq_password: "{{ vault_rabbitmq_password }}"
+# ansible_user: "{{ vault_ansible_user }}"
+# ansible_password: "{{ vault_ansible_password }}" 
+# mysql_root_password: "{{ vault_mysql_root_password }}"
+# rabbitmq_user: "{{ vault_rabbitmq_user }}"
+# rabbitmq_password: "{{ vault_rabbitmq_password }}"
 
 
-mongodb_host: mongodb.janakiraodevops.online
-redis_host: redis.janakiraodevops.online  
-mysql_host: mysql.janakiraodevops.online 
-rabbitmq_host: rabbitmq.janakiraodevops.online 
+# mongodb_host: mongodb.janakiraodevops.online
+# redis_host: redis.janakiraodevops.online  
+# mysql_host: mysql.janakiraodevops.online 
+# rabbitmq_host: rabbitmq.janakiraodevops.online 
 
-catalogue_host: catalogue.janakiraodevops.online 
-user_host: user.janakiraodevops.online 
-cart_host: cart.janakiraodevops.online 
-shipping_host: shipping.janakiraodevops.online
-payment_host: payment.janakiraodevops.online
+# catalogue_host: catalogue.janakiraodevops.online 
+# user_host: user.janakiraodevops.online 
+# cart_host: cart.janakiraodevops.online 
+# shipping_host: shipping.janakiraodevops.online
+# payment_host: payment.janakiraodevops.online
 
-frontend_host: frontend.janakiraodevops.online
+# frontend_host: frontend.janakiraodevops.online
