@@ -8,54 +8,54 @@
     name: common 
     tasks_from: app-setup
 
-# - name: systemd setup 
-#   include_role: 
-#     name: common 
-#     tasks_from: systemd-setup
+- name: systemd setup 
+  include_role: 
+    name: common 
+    tasks_from: systemd-setup
 
-# - name: daemon reload
-#   include_role: 
-#     name: common 
-#     tasks_from: reload
-
-
-# - name: Enable and restart 
-#   include_role: 
-#     name: common 
-#     tasks_from: restart 
+- name: daemon reload
+  include_role: 
+    name: common 
+    tasks_from: reload
 
 
-# - name: Copy mongo repo 
-#   ansible.builtin.copy:
-#     src: mongo.repo
-#     dest: /etc/yum.repos.d/mongo.repo
+- name: Enable and restart 
+  include_role: 
+    name: common 
+    tasks_from: restart 
 
-# - name:  Install mongodb client
-#   ansible.builtin.dnf:
-#     name: mongodb-mongosh
-#     state: present
 
-# - name: Check products loaded or not 
-#   command: mongosh --host "{{ mongodb_host }}" --quiet --eval 'db.getSiblingDB("catalogue").products.countDocuments()'
-#   register: product_count
+- name: Copy mongo repo 
+  ansible.builtin.copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
+
+- name:  Install mongodb client
+  ansible.builtin.dnf:
+    name: mongodb-mongosh
+    state: present
+
+- name: Check products loaded or not 
+  command: mongosh --host "{{ mongodb_host }}" --quiet --eval 'db.getSiblingDB("catalogue").products.countDocuments()'
+  register: product_count
   
 
-# - name: Print product count 
-#   debug:
-#     msg: "{{ product_count }}"
+- name: Print product count 
+  debug:
+    msg: "{{ product_count }}"
 
-# - name: Load the product
-#   shell: mongosh --host "{{ mongodb_host }}" </app/db/master-data.js
-#   when: product_count.stdout | int == 0
-
-
-# - name: daemon reload
-#   include_role: 
-#     name: common 
-#     tasks_from: reload
+- name: Load the product
+  shell: mongosh --host "{{ mongodb_host }}" </app/db/master-data.js
+  when: product_count.stdout | int == 0
 
 
-# - name: Enable and restart 
-#   include_role: 
-#     name: common 
-#     tasks_from: restart 
+- name: daemon reload
+  include_role: 
+    name: common 
+    tasks_from: reload
+
+
+- name: Enable and restart 
+  include_role: 
+    name: common 
+    tasks_from: restart 

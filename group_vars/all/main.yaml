@@ -16,7 +16,7 @@ redis_host: redis.janakiraodevops.online
 mysql_host: mysql.janakiraodevops.online 
 rabbitmq_host: rabbitmq.janakiraodevops.online 
 
-# catalogue_host: catalogue.janakiraodevops.online 
+catalogue_host: catalogue.janakiraodevops.online 
 # user_host: user.janakiraodevops.online 
 # cart_host: cart.janakiraodevops.online 
 # shipping_host: shipping.janakiraodevops.online
