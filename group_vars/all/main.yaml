@@ -14,7 +14,7 @@ rabbitmq_password: "{{ vault_rabbitmq_password }}"
 mongodb_host: mongodb.janakiraodevops.online
 redis_host: redis.janakiraodevops.online  
 mysql_host: mysql.janakiraodevops.online 
-# rabbitmq_host: rabbitmq.janakiraodevops.online 
+rabbitmq_host: rabbitmq.janakiraodevops.online 
 
 # catalogue_host: catalogue.janakiraodevops.online 
 # user_host: user.janakiraodevops.online 
