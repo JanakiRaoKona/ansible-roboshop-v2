@@ -10,7 +10,12 @@
     name: nodejs 
     state: present 
 
+- name: Create app directory
+  ansible.builtin.file:
+    path: /app
+    state: directory
 
 - name: Install npm packages
   community.general.npm:
     path: /app
+    state: present
