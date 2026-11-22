@@ -6,7 +6,7 @@
 - name: java setup
   include_role: 
     name: common
-    tasks_from: java setup 
+    tasks_from: java
 
 - name: systemd setup
   include_role: 
