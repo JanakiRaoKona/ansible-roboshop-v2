@@ -1,3 +1,0 @@
-- name:  Hello from example role 
-  debug:
-    msg: Hi from example role is dependency.
